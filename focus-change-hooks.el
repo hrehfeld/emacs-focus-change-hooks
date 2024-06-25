@@ -25,7 +25,7 @@
   "Hook called exactly once when the focus changes.")
 
 (defun focus-change-hooks-run ()
-  "Check focus state and run `focus-change-hooks-before-hook` if the focus has changed."
+  "Run `focus-change-hooks-before-hook` if the focus has changed."
   ;;(message "focus-change-hooks-run %S (%s) %S" (selected-frame) (frame-live-p (selected-frame)) (cl-find-if (lambda (frame) (eq (frame-focus-state frame) t)) (frame-list)) focus-change-hooks-last-focused-frame)
   (let ((current-focused-frame (selected-frame)))
     (unless (eq current-focused-frame focus-change-hooks-focused-frame)
